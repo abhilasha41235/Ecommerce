@@ -10,10 +10,30 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        var rootVC: UIViewController?
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController?.dismiss(animated: true, completion: nil)
+        let signInVC: SignInViewController = UIStoryboard(.signIn).instantiateViewController()
+        let tempVC = UINavigationController()
+        tempVC.setViewControllers([signInVC], animated: false)
+
+        rootVC = tempVC
+        rootVC?.view.alpha = 0.8
+        self.window?.rootViewController = rootVC
+
+        UIView.transition(with: window!, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            rootVC?.view.alpha = 1.0
+        }, completion: { _ in
+            let defaults = UserDefaults.standard
+            defaults.set("Default", forKey: "userType")
+            // maybe do something here
+        })
         return true
     }
 
