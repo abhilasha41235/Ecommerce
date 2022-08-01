@@ -12,7 +12,7 @@ extension UIStoryboard {
     /// The uniform place where we state all the storyboard we have in our application
 
     enum Storyboard: String {
-        case signIn = "Login"
+        case signIn = "SignIn"
         var filename: String {
             return rawValue
         }
@@ -33,8 +33,8 @@ extension UIStoryboard {
     // MARK: - View Controller Instantiation from Generics
 
     func instantiateViewController<T: UIViewController>() -> T {
-        guard let viewController = self.instantiateViewController(withIdentifier: "Login") as? T else {
-            fatalError("Couldn't instantiate view controller with identifier \(T.mutableOrderedSetValue(forKey: "")) ")
+        guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
+            fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
         }
         return viewController
     }
