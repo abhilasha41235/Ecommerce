@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "eJabali-250x250-transparent.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "Logo_transparent.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController?.dismiss(animated: true, completion: nil)
-        let signInVC: SignInViewController = UIStoryboard(.signIn).instantiateViewController()
+        let signInVC: LaunchViewController = UIStoryboard(.launch).instantiateViewController()
         let tempVC = UINavigationController()
         tempVC.setViewControllers([signInVC], animated: false)
 

@@ -1,0 +1,6 @@
+framework module Pods_Ejabali_EjabaliUITests {
+  umbrella header "Pods-Ejabali-EjabaliUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

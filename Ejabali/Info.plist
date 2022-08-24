@@ -2,6 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NeueHaasDisplay-ThinItalic</string>
+		<string>NeueHaasDisplay-RomanItalic</string>
+		<string>NeueHaasDisplay-Roman</string>
+		<string>NeueHaasDisplay-MediumItalic</string>
+		<string>NeueHaasDisplay-Mediu</string>
+		<string>NeueHaasDisplay-LightItalic</string>
+		<string>NeueHaasDisplay-Light</string>
+		<string>NeueHaasDisplay-BoldItalic</string>
+		<string>NeueHaasDisplay-Bold</string>
+		<string>NeueHaasDisplay-BlackItalic</string>
+		<string>NeueHaasDisplay-Black</string>
+		<string>NeueHaasDisplay-XThinItalic</string>
+		<string>NeueHaasDisplay-XXThinItalic</string>
+		<string>NeueHaasDisplay-XXThin</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -16,7 +38,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>SignIn</string>
+					<string>Launch</string>
 				</dict>
 			</array>
 		</dict>

@@ -13,6 +13,8 @@ extension UIStoryboard {
 
     enum Storyboard: String {
         case signIn = "SignIn"
+        case launch = "Launch"
+        case tabBar = "HomeTabBarController"
         var filename: String {
             return rawValue
         }
